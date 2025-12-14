@@ -26,13 +26,13 @@
   row-gap: 1.5rem;
   align-items: center;
 }
-.toolkit__content > li img {
-  justify-self: center;
-}
 .toolkit__content > li h3 {
   font-family: "OPTIDanley", serif;
   font-weight: 700;
   line-height: 1.3;
+}
+.toolkit__content > li img {
+  margin-inline: auto;
 }
 .toolkit__content > li div {
   display: grid;
