@@ -200,7 +200,7 @@
 .control-aside {
   background-color: var(--background-white);
   border-radius: 0rem 0rem 1.875rem 1.875rem;
-  box-shadow: 0.625rem 0.625rem 1.875rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0.625rem 0.625rem 1.875rem rgba(0, 0, 0, 0.1);
 }
 .control-aside:not(:last-child) {
   margin-block-end: 1.5rem;
