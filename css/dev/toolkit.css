@@ -31,6 +31,9 @@
   font-weight: 700;
   line-height: 1.3;
 }
+.toolkit__content > li picture {
+  justify-self: center;
+}
 .toolkit__content > li img {
   margin-inline: auto;
 }
