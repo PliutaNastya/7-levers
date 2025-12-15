@@ -72,6 +72,13 @@ let slideToggle = (target, duration = 500) => {
   }
 };
 let bodyLockStatus = true;
+let bodyLockToggle = (delay = 500) => {
+  if (document.documentElement.hasAttribute("data-fls-scrolllock")) {
+    bodyUnlock(delay);
+  } else {
+    bodyLock(delay);
+  }
+};
 let bodyUnlock = (delay = 500) => {
   if (bodyLockStatus) {
     const lockPaddingElements = document.querySelectorAll("[data-fls-lp]");
@@ -196,6 +203,7 @@ export {
   bodyUnlock as c,
   dataMediaQueries as d,
   bodyLockStatus as e,
+  bodyLockToggle as f,
   gotoBlock as g,
   slideToggle as s
 };

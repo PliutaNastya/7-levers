@@ -1,4 +1,4 @@
-import { e as bodyLockStatus } from "./common.min.js";
+import { e as bodyLockStatus, f as bodyLockToggle } from "./common.min.js";
 (function polyfill() {
   const relList = document.createElement("link").relList;
   if (relList && relList.supports && relList.supports("modulepreload")) return;
@@ -31,6 +31,9 @@ import { e as bodyLockStatus } from "./common.min.js";
 function menuInit() {
   document.addEventListener("click", function(e) {
     if (bodyLockStatus && e.target.closest("[data-fls-menu]")) {
+      if (window.innerWidth < 768) {
+        bodyLockToggle();
+      }
       document.documentElement.toggleAttribute("data-fls-menu-open");
     }
   });
