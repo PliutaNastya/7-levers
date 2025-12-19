@@ -121,7 +121,7 @@
   box-shadow: 0.625rem 0.625rem 1.875rem rgba(0, 0, 0, 0.3);
 }
 .lab-aside:not(:last-child) {
-  margin-block-end: 1.5rem;
+  margin-block-end: 0.75rem;
 }
 .lab-aside__head {
   font-family: "OPTIDanley", serif;
@@ -138,9 +138,11 @@
 .lab-aside__content {
   display: grid;
   padding-block: 1.5rem;
+  row-gap: 1rem;
 }
 .lab-aside__advisory-content {
   display: flex;
+  align-items: center;
   gap: 0.375rem;
 }
 .lab-aside__advisory-content img {
@@ -150,9 +152,10 @@
 }
 .lab-aside__advisory-content div p {
   line-height: 1.5;
+  font-size: 1rem;
 }
-.lab-aside__advisory-content div p:not(:last-child) {
-  margin-block-end: 0.625rem;
+.lab-aside__advisory-content div p:nth-child(2) {
+  margin-block-start: 0.3125rem;
 }
 .lab-aside__subtitle {
   color: var(--text-blue);
@@ -160,7 +163,7 @@
   font-weight: 700;
 }
 .lab-aside__subtitle:not(:last-child) {
-  margin-block-end: 1.5rem;
+  margin-block-end: 0.75rem;
 }
 .lab-aside__list {
   display: grid;
@@ -168,8 +171,11 @@
   gap: 0.625rem;
   line-height: 1.5;
 }
-.lab-aside__list li:nth-child(4) {
-  grid-row: span 2;
+.lab-aside__list li:nth-child(5) {
+  grid-column: 1/-1;
+}
+.lab-aside__details .text {
+  font-size: 1rem;
 }
 .lab-aside__button {
   display: flex;
@@ -182,6 +188,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 3%;
+  padding: 0.625rem;
   border-radius: 0rem 0rem 1.875rem 1.875rem;
   transition: background-color 0.3s;
 }
@@ -210,6 +217,24 @@
     border-radius: 0rem 0rem 1.25rem 1.25rem;
   }
 }
+@media (height < 43.75em) {
+  .lab-aside__content {
+    padding-block: 0.625rem;
+  }
+  .lab-aside__button {
+    min-height: 4rem;
+  }
+}
+@media (height < 39.375em) {
+  .lab-aside__details .text {
+    font-size: 0.875rem;
+  }
+}
+@media (height < 37.5em) {
+  .lab-aside__advisory-content div p:nth-child(2) {
+    display: none;
+  }
+}
 @media (width <= 20em) {
   .board {
     padding-block-start: 1rem;
@@ -232,20 +257,16 @@
   .board section.bg {
     padding-inline: 0.75rem;
   }
-  .lab-aside__content {
-    row-gap: 1.5rem;
-  }
-  .lab-aside__advisory-content div p {
-    font-size: 0.875rem;
-  }
   .lab-aside__subtitle {
     font-size: 1.25rem;
   }
   .lab-aside__list {
     font-size: 0.875rem;
   }
-  .lab-aside__details .text {
-    font-size: 1rem;
+}
+@media (min-width: 61.99875em) and (width <= 61.99875em) {
+  .lab-aside__advisory-content div p {
+    font-size: 0.875rem;
   }
 }
 @media (width > 20em) and (width <= 91.0625em) {
@@ -270,20 +291,11 @@
   .board section.bg {
     padding-inline: clamp( 0.75rem , -0.09432717678125rem  +  4.2216358839vw , 3.75rem );
   }
-  .lab-aside__content {
-    row-gap: clamp( 1.5rem , 1.148197009675rem  +  1.7590149516vw , 2.75rem );
-  }
-  .lab-aside__advisory-content div p {
-    font-size: clamp( 0.875rem , 0.7694591029rem  +  0.5277044855vw , 1.25rem );
-  }
   .lab-aside__subtitle {
     font-size: clamp( 1.25rem , 1.1796394019375rem  +  0.3518029903vw , 1.5rem );
   }
   .lab-aside__list {
     font-size: clamp( 0.875rem , 0.85740985048125rem  +  0.0879507476vw , 0.9375rem );
-  }
-  .lab-aside__details .text {
-    font-size: clamp( 1rem , 0.96481970096875rem  +  0.1759014952vw , 1.125rem );
   }
 }
 @media (width > 61.99875em) and (width <= 91.0625em) {
@@ -298,6 +310,16 @@
   }
   .lab-aside__content {
     padding-inline: clamp( 0.9375rem , -0.92904875059375rem  +  3.010623199vw , 1.8125rem );
+  }
+}
+@media (min-width: 61.99875em) and (width > 91.0625em) {
+  .lab-aside__advisory-content div p {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 61.99875em) and (width > 61.99875em) and (width <= 91.0625em) {
+  .lab-aside__advisory-content div p {
+    font-size: clamp( 0.875rem , 0.6083501784875rem  +  0.4300890284vw , 1rem );
   }
 }
 @media (min-width: 61.99875em) {
@@ -340,20 +362,11 @@
   .lab-aside__content {
     padding-inline: 1.8125rem;
   }
-  .lab-aside__content {
-    row-gap: 2.75rem;
-  }
-  .lab-aside__advisory-content div p {
-    font-size: 1.25rem;
-  }
   .lab-aside__subtitle {
     font-size: 1.5rem;
   }
   .lab-aside__list {
     font-size: 0.9375rem;
-  }
-  .lab-aside__details .text {
-    font-size: 1.125rem;
   }
 }
 @media (any-hover: hover), (pointer: fine) {
