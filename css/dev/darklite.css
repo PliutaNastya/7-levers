@@ -389,6 +389,7 @@ body {
   width: 100%;
   margin-inline: auto;
   font-size: 1rem;
+  line-height: 1.4;
 }
 .aside__additional a {
   font-weight: 700;
