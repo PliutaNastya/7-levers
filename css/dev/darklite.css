@@ -831,13 +831,16 @@ body {
   .copy-footer__info a:nth-child(n+2)::before {
     margin-inline: 0.5rem;
   }
+}@media (min-width: 61.99875em) and (width <= 61.99875em){
+  .aside {
+    flex-basis: 25.625rem;
+  }
+  .inner .menu__list {
+    column-gap: 0.625rem;
+  }
 }@media (max-width: 47.99875em) and (width > 91.0625em){
   .menu__body::before {
     height: 4.75rem;
-  }
-}@media (min-width: 61.99875em) and (width <= 61.99875em){
-  .inner .menu__list {
-    column-gap: 0.625rem;
   }
 }@media (width > 20em) and (width <= 91.0625em){
   .logo {
@@ -936,10 +939,16 @@ body {
     width: clamp( 2.625rem , -0.10816067050625rem  +  4.4084125414vw , 3.90625rem );
   }
 }@media (min-width: 61.99875em) and (width > 91.0625em){
+  .aside {
+    flex-basis: 31.25rem;
+  }
   .inner .menu__list {
     column-gap: 2.5rem;
   }
 }@media (min-width: 61.99875em) and (width > 61.99875em) and (width <= 91.0625em){
+  .aside {
+    flex-basis: clamp( 25.625rem , 13.6257580319125rem  +  19.3540062793vw , 31.25rem );
+  }
   .inner .menu__list {
     column-gap: clamp( 0.625rem , -3.37474732269375rem  +  6.4513354264vw , 2.5rem );
   }
@@ -949,10 +958,10 @@ body {
     top: 0;
     right: 0;
     z-index: 50;
-    flex: 0 1 31.25rem;
+    flex-shrink: 0;
     align-self: flex-start;
-    min-width: 25.625rem;
     padding-inline: 0.625rem;
+    width: 100%;
   }
   .inner .header__container {
     padding-inline: 0.9375rem 0rem;
