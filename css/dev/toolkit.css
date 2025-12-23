@@ -9,6 +9,14 @@
   flex: 0 1 58.125rem;
   display: grid;
 }
+.toolkit__images {
+  margin-inline: auto;
+}
+.toolkit__images img {
+  max-width: 49.6875rem;
+  width: 100%;
+  aspect-ratio: 795/302;
+}
 .toolkit__content {
   display: grid;
   row-gap: 0.75rem;
@@ -70,40 +78,6 @@
 }
 .toolkit .button {
   margin-block-start: 1rem;
-}
-
-.images-toolkit {
-  position: relative;
-  max-width: 49.8125rem;
-  aspect-ratio: 797/279;
-}
-.images-toolkit__item {
-  position: absolute;
-}
-.images-toolkit__item--canvas {
-  width: 35.375157%; /* 281.94/797 */
-  aspect-ratio: 282/196;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-}
-.images-toolkit__item--guide {
-  width: 59.096612%; /* 471/797 */
-  aspect-ratio: 471/266;
-  bottom: 4.301075%; /* 12/279 */
-  left: 23.713927%; /* 189/797 */
-}
-.images-toolkit__item--roadmap {
-  width: 29.987453%; /* 239/797 */
-  aspect-ratio: 237/283;
-  bottom: -10.752688%; /* -30/279 */
-  right: 4.015056%; /* 32/797 */
-}
-.images-toolkit__item--audiobook {
-  width: 11.417817%; /* 91/797 */
-  aspect-ratio: 91/170;
-  bottom: 0;
-  right: 0;
 }
 
 .form-toolkit__inputs {
