@@ -837,7 +837,7 @@ body {
   }
 }@media (min-width: 61.99875em) and (width <= 61.99875em){
   .inner .menu__list {
-    column-gap: 0.9375rem;
+    column-gap: 0.625rem;
   }
 }@media (width > 20em) and (width <= 91.0625em){
   .logo {
@@ -941,7 +941,7 @@ body {
   }
 }@media (min-width: 61.99875em) and (width > 61.99875em) and (width <= 91.0625em){
   .inner .menu__list {
-    column-gap: clamp( 0.9375rem , -2.3956227689125rem  +  5.3761128554vw , 2.5rem );
+    column-gap: clamp( 0.625rem , -3.37474732269375rem  +  6.4513354264vw , 2.5rem );
   }
 }@media (min-width: 61.99875em){
   .aside {
